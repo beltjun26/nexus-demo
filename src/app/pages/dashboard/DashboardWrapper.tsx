@@ -61,7 +61,7 @@ const DashboardPage = () => (
 const DashboardWrapper = () => {
   return (
     <EnableSidebar>
-      <PageTitle description='You’ve got 24 New Sales' breadcrumbs={[]}>
+      <PageTitle description='Welcome to hypernexus' breadcrumbs={[]}>
         Hello, Paul
       </PageTitle>
       <DashboardPage />

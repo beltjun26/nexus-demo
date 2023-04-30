@@ -19,7 +19,7 @@ const MixedWidget15: FC<Props> = ({className, backGroundColor}) => (
       <div className='d-flex flex-column mb-7'>
         {/* begin::Title  */}
         <a href='#' className='text-dark text-hover-primary fw-bolder fs-3'>
-          Summary
+          # of Active High Risk
         </a>
         {/* end::Title */}
       </div>

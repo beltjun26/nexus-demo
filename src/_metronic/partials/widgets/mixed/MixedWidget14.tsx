@@ -50,7 +50,7 @@ const MixedWidget14: React.FC<Props> = ({className, backGroundColor, chartHeight
         <div className='d-flex flex-column flex-grow-1'>
           {/* begin::Title                    */}
           <a href='#' className='text-dark text-hover-primary fw-bolder fs-3'>
-            Contributors
+            Total Lifetime Conversations
           </a>
 
           {/* end::Title */}
@@ -65,9 +65,6 @@ const MixedWidget14: React.FC<Props> = ({className, backGroundColor, chartHeight
 
         {/* begin::Stats */}
         <div className='pt-5'>
-          {/* begin::Symbol */}
-          <span className='text-dark fw-bolder fs-2x lh-0'>$</span>
-          {/* end::Symbol */}
 
           {/* begin::Number */}
           <span className='text-dark fw-bolder fs-3x me-2 lh-0'>47</span>
