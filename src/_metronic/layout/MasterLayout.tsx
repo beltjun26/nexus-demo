@@ -54,7 +54,6 @@ const MasterLayout = () => {
 
         {/* begin:: Modals */}
         <InviteUsers />
-        <UpgradePlan />
         {/* end:: Modals */}
         <ScrollTop />
       </ThemeModeProvider>
