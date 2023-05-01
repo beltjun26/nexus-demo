@@ -1,7 +1,7 @@
 import {EnableSidebar, PageTitle} from '../../../_metronic/layout/core'
 import {
-  ListsWidget4,
-  ListsWidget5,
+  // ListsWidget4,
+  // ListsWidget5,
   TablesWidget9,
   MixedWidget13,
   MixedWidget14,
