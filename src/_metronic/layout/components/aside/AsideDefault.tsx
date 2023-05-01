@@ -25,7 +25,7 @@ const AsideDefault = () => {
       <div className='aside-logo flex-column-auto px-9 mb-9' id='kt_aside_logo'>
         {/* begin::Logo */}
         <Link to='/dashboard'>
-          <h1>
+          <h1 style={{fontSize: '2.3rem'}}>
             hypernexus.
           </h1>
         </Link>

@@ -23,16 +23,7 @@ const AuthLayout = () => {
       <div className='d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20'>
         {/* begin::Logo */}
         <a href='#' className='mb-12'>
-          <img
-            alt='Logo'
-            src={toAbsoluteUrl('/media/logos/default-dark.svg')}
-            className='theme-dark-show h-45px'
-          />
-          <img
-            alt='Logo'
-            src={toAbsoluteUrl('/media/logos/default.svg')}
-            className='theme-light-show h-45px'
-          ></img>
+          <h1 style={{ fontSize: '3rem'}}>Hypernexus</h1>
         </a>
         {/* end::Logo */}
         {/* begin::Wrapper */}

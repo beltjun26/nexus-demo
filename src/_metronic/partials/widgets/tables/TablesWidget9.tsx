@@ -12,8 +12,8 @@ const TablesWidget9: React.FC<Props> = ({className}) => {
       {/* begin::Header */}
       <div className='card-header border-0 pt-5'>
         <h3 className='card-title align-items-start flex-column'>
-          <span className='card-label fw-bold fs-3 mb-1'>Members Statistics</span>
-          <span className='text-muted mt-1 fw-semibold fs-7'>Over 500 members</span>
+          <span className='card-label fw-bold fs-3 mb-1'>Recently Active Personas</span>
+          {/* <span className='text-muted mt-1 fw-semibold fs-7'>Over 500 members</span> */}
         </h3>
         <div
           className='card-toolbar'
@@ -22,7 +22,7 @@ const TablesWidget9: React.FC<Props> = ({className}) => {
           data-bs-trigger='hover'
           title='Click to add a user'
         >
-          <a
+          {/* <a
             href='#'
             className='btn btn-sm btn-light-primary'
             data-bs-toggle='modal'
@@ -30,7 +30,7 @@ const TablesWidget9: React.FC<Props> = ({className}) => {
           >
             <KTIcon iconName='plus' className='fs-3' />
             New Member
-          </a>
+          </a> */}
         </div>
       </div>
       {/* end::Header */}
@@ -54,9 +54,12 @@ const TablesWidget9: React.FC<Props> = ({className}) => {
                     />
                   </div>
                 </th>
-                <th className='min-w-150px'>Authors</th>
-                <th className='min-w-140px'>Company</th>
-                <th className='min-w-120px'>Progress</th>
+                <th className='min-w-150px'>Persona</th>
+                <th className='min-w-140px'>Type</th>
+                <th className='min-w-120px'>Channels</th>
+                <th className='min-w-120px'>Total Active conversations</th>
+                <th className='min-w-120px'>Total Lifetime conversations</th>
+                <th className='min-w-120px'>Status</th>
                 <th className='min-w-100px text-end'>Actions</th>
               </tr>
             </thead>
