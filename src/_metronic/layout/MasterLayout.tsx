@@ -40,7 +40,7 @@ const MasterLayout = () => {
                   <Outlet />
                 </Content>
               </div>
-              <Footer />
+              {/* <Footer /> */}
             </div>
             <Sidebar />
           </div>
