@@ -132,7 +132,7 @@
                 "block_height": 784919,
                 "block_hash": "00000000000000000002fd6ee2ed7448d10cc29400fb102f16f3c9f8e0159b14",
                 "block_time": 1681218131
-              },
+              }
             },{
             "txid": "2496214063e3bf1fc8275f2be72ac462097970a7e0f08e5ba100a627e4fa073d",
             "version": 1,
@@ -197,7 +197,7 @@
             }
           }]
         }
-      },
+      }
     },
       "212":{
       "user_phone": "",
@@ -305,7 +305,7 @@
       },
       "blochain_info": {
         "bitcoin": ""         
-      },
+      }
     }
   }]
 }

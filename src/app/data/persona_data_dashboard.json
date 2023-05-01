@@ -1,262 +1,284 @@
 {
-  "persona_data": [{
-    "id": "1",
-    "name": "Jason Smith",
-    "image:": "https://cdn.hypernexus.com/image_1.jpg",
-    "type": "Sextortion",
-    "status": "active",
-    "total_active_conversations": "10",
-    "total_lifetime_conversations": "212",
-    "recent_activity": "April 21, 2023 - 23:21 ET",
-    "channels": {
-      "discord": {
-          "channel_status": "active",
-          "active_conversations": "10",
-          "lifetime_conversations": "112",
-      },
-      "twitch": {
-          "channel_status": "inactive",
-          "active_conversations": "0",
-          "lifetime_conversations": "0",
-      },
-      "telegram": {
-          "channel_status": "inactive",
-          "active_conversations": "0",
-          "lifetime_conversations": "0",
-      },
-      "sms": {
-          "channel_status": "active",
-          "active_conversations": "10",
-          "lifetime_conversations": "100",
-      },
-      "voice": {
-          "channel_status": "inactive",
-          "active_conversations": "0",
-          "lifetime_conversations": "0",
-      },        
-    }, 
-    "bio": {
-      "gender": "male",
-      "age": "14",
-      "parents": "divorced",
-      "lives_with": "mom",
-      "sibling_data": "",
-      "social_media_accounts": {
+  "persona_data": [
+    {
+      "id": "1",
+      "name": "Jason Smith",
+      "image:": "https://cdn.hypernexus.com/image_1.jpg",
+      "type": "Sextortion",
+      "status": "active",
+      "total_active_conversations": "10",
+      "total_lifetime_conversations": "212",
+      "recent_activity": "April 21, 2023 - 23:21 ET",
+      "channels": {
         "discord": {
           "channel_status": "active",
-          "account_name": "jas0n_the_13th_la#2002"
-        },
-        "instagram": {
-          "channel_status": "inactive",
-          "account_name": ""
-        },
-        "facebook": {
-          "channel_status": "inactive",
-          "account_name": ""
-        },
-        "telegram": {
-          "channel_status": "inactive",
-          "account_name": ""
+          "active_conversations": "10",
+          "lifetime_conversations": "112"
         },
         "twitch": {
           "channel_status": "inactive",
-          "account_name": ""
-        }
-      },
-      "music": ["Alt", "Indie"],
-      "hobbies": ["Plays video games, in particular Fortnite & Apex", "reads comics", "watches anime", "working out", "hiking"],
-      "pet_data": {
-        "pet": {
-          "type": "dog",
-          "name": "Trevor",
-          "age": "5"
-        }
-      },
-      "sports": "",
-      "city": "Eagle Rock",
-      "state": "California",
-      "zip_code": "90041",
-      "mobile_phone": "323-909-4744"
-    },
-  }, {
-    "id": "2",
-    "name": "Dominique Doe",
-    "image:": "https://cdn.hypernexus.com/image_2.jpg",
-    "type": "Child Predation",
-    "status": "active",
-    "total_active_conversations": "17",
-    "total_lifetime_conversations": "107",
-    "recent_activity": "April 21, 2023 - 16:21 ET",
-    "channels": {
-      "discord": {
+          "active_conversations": "0",
+          "lifetime_conversations": "0"
+        },
+        "telegram": {
+          "channel_status": "inactive",
+          "active_conversations": "0",
+          "lifetime_conversations": "0"
+        },
+        "sms": {
           "channel_status": "active",
           "active_conversations": "10",
-          "lifetime_conversations": "57",
+          "lifetime_conversations": "100"
         },
-      "twitch": {
+        "voice": {
           "channel_status": "inactive",
           "active_conversations": "0",
-          "lifetime_conversations": "0",
+          "lifetime_conversations": "0"
+        }
+      },
+      "bio": {
+        "gender": "male",
+        "age": "14",
+        "parents": "divorced",
+        "lives_with": "mom",
+        "sibling_data": "",
+        "social_media_accounts": {
+          "discord": {
+            "channel_status": "active",
+            "account_name": "jas0n_the_13th_la#2002"
+          },
+          "instagram": {
+            "channel_status": "inactive",
+            "account_name": ""
+          },
+          "facebook": {
+            "channel_status": "inactive",
+            "account_name": ""
+          },
+          "telegram": {
+            "channel_status": "inactive",
+            "account_name": ""
+          },
+          "twitch": {
+            "channel_status": "inactive",
+            "account_name": ""
+          }
         },
-      "telegram": {
+        "music": [
+          "Alt",
+          "Indie"
+        ],
+        "hobbies": [
+          "Plays video games, in particular Fortnite & Apex",
+          "reads comics",
+          "watches anime",
+          "working out",
+          "hiking"
+        ],
+        "pet_data": {
+          "pet": {
+            "type": "dog",
+            "name": "Trevor",
+            "age": "5"
+          }
+        },
+        "sports": "",
+        "city": "Eagle Rock",
+        "state": "California",
+        "zip_code": "90041",
+        "mobile_phone": "323-909-4744"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Dominique Doe",
+      "image:": "https://cdn.hypernexus.com/image_2.jpg",
+      "type": "Child Predation",
+      "status": "active",
+      "total_active_conversations": "17",
+      "total_lifetime_conversations": "107",
+      "recent_activity": "April 21, 2023 - 16:21 ET",
+      "channels": {
+        "discord": {
+          "channel_status": "active",
+          "active_conversations": "10",
+          "lifetime_conversations": "57"
+        },
+        "twitch": {
           "channel_status": "inactive",
           "active_conversations": "0",
-          "lifetime_conversations": "0",
+          "lifetime_conversations": "0"
         },
-      "sms": {
+        "telegram": {
+          "channel_status": "inactive",
+          "active_conversations": "0",
+          "lifetime_conversations": "0"
+        },
+        "sms": {
           "channel_status": "active",
           "active_conversations": "7",
-          "lifetime_conversations": "50",
+          "lifetime_conversations": "50"
         },
-      "voice": {
+        "voice": {
           "channel_status": "inactive",
           "active_conversations": "0",
-          "lifetime_conversations": "0",
-        },        
-      }, 
-    "bio": {
-      "gender": "female",
-      "age": "13",
-      "parents": "divorced",
-      "lives_with": "mom",
-      "sibling_data": {
-        "sibling": {
-          "type": "sister",
-          "name": "Dalia",
-          "age": "9",
-          "status": "alive"
+          "lifetime_conversations": "0"
         }
       },
-      "social_media_accounts": {
+      "bio": {
+        "gender": "female",
+        "age": "13",
+        "parents": "divorced",
+        "lives_with": "mom",
+        "sibling_data": {
+          "sibling": {
+            "type": "sister",
+            "name": "Dalia",
+            "age": "9",
+            "status": "alive"
+          }
+        },
+        "social_media_accounts": {
+          "discord": {
+            "channel_status": "active",
+            "account_name": "em0d0mUnique#3647"
+          },
+          "instagram": {
+            "channel_status": "inactive",
+            "account_name": ""
+          },
+          "facebook": {
+            "channel_status": "inactive",
+            "account_name": ""
+          },
+          "telegram": {
+            "channel_status": "inactive",
+            "account_name": ""
+          },
+          "twitch": {
+            "channel_status": "inactive",
+            "account_name": ""
+          }
+        },
+        "music": [
+          "Emo"
+        ],
+        "hobbies": [
+          "Drawing fan art of her favorite cartoon, manga & anime characters",
+          "Listening to emo music"
+        ],
+        "pet_data": {
+          "pet": {
+            "type": "cat",
+            "name": "Lacy",
+            "age": "5"
+          },
+          "pet": {
+            "type": "cat",
+            "name": "Jinx",
+            "age": "3"
+          }
+        },
+        "sports": "",
+        "city": "Ft. Worth",
+        "state": "Texas",
+        "zip_code": "76008",
+        "mobile_phone": "817-730-5859"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Dorothy Charles",
+      "image:": "https://cdn.hypernexus.com/image_3.jpg",
+      "type": "Elderly Financial",
+      "status": "active",
+      "total_active_conversations": "2",
+      "total_lifetime_conversations": "5",
+      "recent_activity": "April 21, 2023 - 10:19 ET",
+      "channels": {
         "discord": {
-          "channel_status": "active",
-          "account_name": "em0d0mUnique#3647"
-        },
-        "instagram": {
           "channel_status": "inactive",
-          "account_name": ""
-        },
-        "facebook": {
-          "channel_status": "inactive",
-          "account_name": ""
-        },
-        "telegram": {
-          "channel_status": "inactive",
-          "account_name": ""
+          "active_conversations": "0",
+          "lifetime_conversations": "0"
         },
         "twitch": {
           "channel_status": "inactive",
-          "account_name": ""
-        }
-      },
-      "music": ["Emo"],
-      "hobbies": ["Drawing fan art of her favorite cartoon, manga & anime characters", "Listening to emo music"],
-      "pet_data": {
-        "pet": {
-          "type": "cat",
-          "name": "Lacy",
-          "age": "5"
+          "active_conversations": "0",
+          "lifetime_conversations": "0"
         },
-        "pet": {
-          "type": "cat",
-          "name": "Jinx",
-          "age": "3"
-        }
-      },
-      "sports": "",
-      "city": "Ft. Worth",
-      "state": "Texas",
-      "zip_code": "76008",
-      "mobile_phone": "817-730-5859"
-    },
-  }, {
-    "id": "3",
-    "name": "Dorothy Charles",
-    "image:": "https://cdn.hypernexus.com/image_3.jpg",
-    "type": "Elderly Financial",
-    "status": "active",
-    "total_active_conversations": "2",
-    "total_lifetime_conversations": "5",
-    "recent_activity": "April 21, 2023 - 10:19 ET",
-    "channels": {
-      "discord": {
+        "telegram": {
           "channel_status": "inactive",
           "active_conversations": "0",
-          "lifetime_conversations": "0",
+          "lifetime_conversations": "0"
         },
-      "twitch": {
-          "channel_status": "inactive",
-          "active_conversations": "0",
-          "lifetime_conversations": "0",
-        },
-      "telegram": {
-          "channel_status": "inactive",
-          "active_conversations": "0",
-          "lifetime_conversations": "0",
-        },
-      "sms": {
+        "sms": {
           "channel_status": "active",
           "active_conversations": "10",
-          "lifetime_conversations": "0",
+          "lifetime_conversations": "0"
         },
-      "voice": {
+        "voice": {
           "channel_status": "inactive",
           "active_conversations": "2",
-          "lifetime_conversations": "5",
-        },        
-      }, 
-    "bio": {
-      "gender": "female",
-      "age": "83",
-      "parents": "deceased",
-      "lives_with": "alone",
-      "sibling_data": {
-        "sibling": {
-          "type": "sister",
-          "name": "Patricia",
-          "age": "89",
-          "status": "deceased"
+          "lifetime_conversations": "5"
         }
       },
-      "social_media_accounts": {
-        "discord": {
-          "channel_status": "inactive",
-          "account_name": ""
+      "bio": {
+        "gender": "female",
+        "age": "83",
+        "parents": "deceased",
+        "lives_with": "alone",
+        "sibling_data": {
+          "sibling": {
+            "type": "sister",
+            "name": "Patricia",
+            "age": "89",
+            "status": "deceased"
+          }
         },
-        "instagram": {
-          "channel_status": "inactive",
-          "account_name": ""
+        "social_media_accounts": {
+          "discord": {
+            "channel_status": "inactive",
+            "account_name": ""
+          },
+          "instagram": {
+            "channel_status": "inactive",
+            "account_name": ""
+          },
+          "facebook": {
+            "channel_status": "active",
+            "account_name": "dorothy.charles.23"
+          },
+          "telegram": {
+            "channel_status": "inactive",
+            "account_name": ""
+          },
+          "twitch": {
+            "channel_status": "inactive",
+            "account_name": ""
+          }
         },
-        "facebook": {
-          "channel_status": "active",
-          "account_name": "dorothy.charles.23"
+        "music": [
+          "Christian",
+          "Gospel"
+        ],
+        "hobbies": [
+          "Crosswords",
+          "Bingo",
+          "Watching soap operas"
+        ],
+        "pet_data": {
+          "pet": {
+            "type": "dog",
+            "name": "Prissy",
+            "age": "12"
+          }
         },
-        "telegram": {
-          "channel_status": "inactive",
-          "account_name": ""
-        },
-        "twitch": {
-          "channel_status": "inactive",
-          "account_name": ""
-        }
-      },
-      "music": ["Christian", "Gospel"],
-      "hobbies": ["Crosswords","Bingo","Watching soap operas"],
-      "pet_data": {
-        "pet": {
-          "type": "dog",
-          "name": "Prissy",
-          "age": "12"
-        }
-      },
-      "sports": "",
-      "city": "Greenville",
-      "state": "North Carolina",
-      "zip_code": "29601",
-      "mobile_phone": "864-527-8411"
-    },
-  }]
+        "sports": "",
+        "city": "Greenville",
+        "state": "North Carolina",
+        "zip_code": "29601",
+        "mobile_phone": "864-527-8411"
+      }
+    }
+  ]
 }
-
-
-
