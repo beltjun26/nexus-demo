@@ -1,11 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+import React, { useContext } from 'react'
 import {KTIcon, toAbsoluteUrl} from '../../../_metronic/helpers'
-import {Link, useLocation} from 'react-router-dom'
+import {Link, useLocation, useParams} from 'react-router-dom'
 import {Dropdown1} from '../../../_metronic/partials'
+import { NexusDataContext } from '../../data/data'
 
 const ProfileHeader: React.FC = () => {
   const location = useLocation()
+  const { id } = useParams()
+  console.log('id', id)
+  const nexusData = useContext(NexusDataContext)
+
+  const persona = nexusData.personas.find((persona) => persona.id === id)
 
   return (
     <div className='card mb-5 mb-xl-10'>
@@ -13,7 +19,7 @@ const ProfileHeader: React.FC = () => {
         <div className='d-flex flex-wrap flex-sm-nowrap mb-3'>
           <div className='me-7 mb-4'>
             <div className='symbol symbol-100px symbol-lg-160px symbol-fixed position-relative'>
-              <img src={toAbsoluteUrl('/media/avatars/300-1.jpg')} alt='Metornic' />
+              <img src={toAbsoluteUrl(persona?.image ?? '')} alt='Metornic' />
               <div className='position-absolute translate-middle bottom-0 start-100 mb-6 bg-success rounded-circle border border-4 border-white h-20px w-20px'></div>
             </div>
           </div>
@@ -23,7 +29,7 @@ const ProfileHeader: React.FC = () => {
               <div className='d-flex flex-column'>
                 <div className='d-flex align-items-center mb-2'>
                   <a href='#' className='text-gray-800 text-hover-primary fs-2 fw-bolder me-1'>
-                    Max Smith
+                    {persona?.name}
                   </a>
                   <a href='#'>
                     <KTIcon iconName='verify' className='fs-1 text-primary' />
@@ -36,22 +42,22 @@ const ProfileHeader: React.FC = () => {
                     className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'
                   >
                     <KTIcon iconName='profile-circle' className='fs-4 me-1' />
-                    Developer
+                    {persona?.type}
                   </a>
                   <a
                     href='#'
                     className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'
                   >
                     <KTIcon iconName='geolocation' className='fs-4 me-1' />
-                    SF, Bay Area
+                    {persona?.bio.city},{persona?.bio.state},
                   </a>
-                  <a
+                  {/* <a
                     href='#'
                     className='d-flex align-items-center text-gray-400 text-hover-primary mb-2'
                   >
                     <KTIcon iconName='sms' className='fs-4 me-1' />
                     max@kt.com
-                  </a>
+                  </a> */}
                 </div>
               </div>
 
@@ -59,7 +65,7 @@ const ProfileHeader: React.FC = () => {
                 <a href='#' className='btn btn-sm btn-light me-2' id='kt_user_follow_button'>
                   <KTIcon iconName='check' className='fs-3 d-none' />
 
-                  <span className='indicator-label'>Follow</span>
+                  <span className='indicator-label'>Pause</span>
                   <span className='indicator-progress'>
                     Please wait...
                     <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
@@ -71,7 +77,7 @@ const ProfileHeader: React.FC = () => {
                   data-bs-toggle='modal'
                   data-bs-target='#kt_modal_offer_a_deal'
                 >
-                  Hire Me
+                  Export
                 </a>
                 <div className='me-0'>
                   <button
@@ -93,32 +99,32 @@ const ProfileHeader: React.FC = () => {
                   <div className='border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
                     <div className='d-flex align-items-center'>
                       <KTIcon iconName='arrow-up' className='fs-3 text-success me-2' />
-                      <div className='fs-2 fw-bolder'>4500$</div>
+                      <div className='fs-2 fw-bolder'>{persona?.status}</div>
                     </div>
 
-                    <div className='fw-bold fs-6 text-gray-400'>Earnings</div>
+                    <div className='fw-bold fs-6 text-gray-400'>Status</div>
                   </div>
 
                   <div className='border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
                     <div className='d-flex align-items-center'>
                       <KTIcon iconName='arrow-down' className='fs-3 text-danger me-2' />
-                      <div className='fs-2 fw-bolder'>75</div>
+                      <div className='fs-2 fw-bolder'>{persona?.total_active_conversations}</div>
                     </div>
 
-                    <div className='fw-bold fs-6 text-gray-400'>Projects</div>
+                    <div className='fw-bold fs-6 text-gray-400'>Active Conversation</div>
                   </div>
 
                   <div className='border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
                     <div className='d-flex align-items-center'>
                       <KTIcon iconName='arrow-up' className='fs-3 text-success me-2' />
-                      <div className='fs-2 fw-bolder'>60%</div>
+                      <div className='fs-2 fw-bolder'>{persona?.total_active_conversations}</div>
                     </div>
 
-                    <div className='fw-bold fs-6 text-gray-400'>Success Rate</div>
+                    <div className='fw-bold fs-6 text-gray-400'>Lifetime Conversation</div>
                   </div>
                 </div>
               </div>
-
+{/* 
               <div className='d-flex align-items-center w-200px w-sm-300px flex-column mt-3'>
                 <div className='d-flex justify-content-between w-100 mt-auto mb-2'>
                   <span className='fw-bold fs-6 text-gray-400'>Profile Compleation</span>
@@ -131,7 +137,7 @@ const ProfileHeader: React.FC = () => {
                     style={{width: '50%'}}
                   ></div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -142,55 +148,33 @@ const ProfileHeader: React.FC = () => {
               <Link
                 className={
                   `nav-link text-active-primary me-6 ` +
-                  (location.pathname === '/crafted/pages/profile/overview' && 'active')
+                  (location.pathname === `/personas/${id}/channel` && 'active')
                 }
-                to='/crafted/pages/profile/overview'
+                to={`/personas/${id}/channel`}
               >
-                Overview
+                Channel
               </Link>
             </li>
             <li className='nav-item'>
               <Link
                 className={
                   `nav-link text-active-primary me-6 ` +
-                  (location.pathname === '/crafted/pages/profile/projects' && 'active')
+                  (location.pathname === `/personas/${id}/bio` && 'active')
                 }
-                to='/crafted/pages/profile/projects'
+                to={`/personas/${id}/bio`}
               >
-                Projects
+                Bio
               </Link>
             </li>
             <li className='nav-item'>
               <Link
                 className={
                   `nav-link text-active-primary me-6 ` +
-                  (location.pathname === '/crafted/pages/profile/campaigns' && 'active')
+                  (location.pathname === `/personas/${id}/conversations` && 'active')
                 }
-                to='/crafted/pages/profile/campaigns'
+                to={`/personas/${id}/conversations`}
               >
-                Campaigns
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                className={
-                  `nav-link text-active-primary me-6 ` +
-                  (location.pathname === '/crafted/pages/profile/documents' && 'active')
-                }
-                to='/crafted/pages/profile/documents'
-              >
-                Documents
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                className={
-                  `nav-link text-active-primary me-6 ` +
-                  (location.pathname === '/crafted/pages/profile/connections' && 'active')
-                }
-                to='/crafted/pages/profile/connections'
-              >
-                Connections
+                Conversations
               </Link>
             </li>
           </ul>

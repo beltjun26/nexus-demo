@@ -11,6 +11,7 @@ import {ActivityDrawer, DrawerMessenger, InviteUsers, UpgradePlan} from '../part
 import {ThemeModeProvider} from '../partials/layout/theme-mode/ThemeModeProvider'
 import {MenuComponent} from '../assets/ts/components'
 import {Sidebar} from './components/Sidebar'
+import { RestrictedAccess } from '../partials/modals/restricted-access/RestrictedAccess'
 
 const MasterLayout = () => {
   const location = useLocation()
@@ -53,6 +54,7 @@ const MasterLayout = () => {
         {/* end:: Drawers */}
 
         {/* begin:: Modals */}
+        <RestrictedAccess />
         <InviteUsers />
         {/* end:: Modals */}
         <ScrollTop />

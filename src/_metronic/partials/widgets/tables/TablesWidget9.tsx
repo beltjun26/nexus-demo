@@ -2,6 +2,7 @@
 import React, {useContext} from 'react'
 import {KTIcon, toAbsoluteUrl} from '../../../helpers'
 import {NexusDataContext} from '../../../../app/data/data'
+import { Link } from 'react-router-dom'
 
 type Props = {
   className: string
@@ -75,6 +76,8 @@ const TablesWidget9: React.FC<Props> = ({className}) => {
 
                 const activeChannelsString = activeChannels.join(', ')
 
+                const personaLink = `/personas/${persona.id}/channel`
+
                 return (
                   <tr>
                     <td>
@@ -89,12 +92,12 @@ const TablesWidget9: React.FC<Props> = ({className}) => {
                     <td>
                       <div className='d-flex align-items-center'>
                         <div className='symbol symbol-45px me-5'>
-                          <img src={toAbsoluteUrl('/media/avatars/300-14.jpg')} alt='' />
+                          <img src={toAbsoluteUrl(persona.image)} alt='' />
                         </div>
                         <div className='d-flex justify-content-start flex-column'>
-                          <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
+                          <Link to={personaLink} className='text-dark fw-bold text-hover-primary fs-6'>
                             {persona.name}
-                          </a>
+                          </Link>
                           <span className='text-muted fw-semibold text-muted d-block fs-7'>
                             {persona.type}
                           </span>

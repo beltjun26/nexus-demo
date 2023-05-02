@@ -2,6 +2,7 @@
 import React, {useContext} from 'react'
 import { NexusDataContext } from '../../data/data'
 import { KTIcon, toAbsoluteUrl } from '../../../_metronic/helpers'
+import { Link } from 'react-router-dom'
 // import {KTIcon, toAbsoluteUrl} from '../../../helpers'
 // import {NexusDataContext} from '../../../../app/data/data'
 
@@ -31,7 +32,7 @@ const PersonasTable: React.FC<Props> = ({className}) => {
             href='#'
             className='btn btn-sm btn-light-primary'
             data-bs-toggle='modal'
-            data-bs-target='#kt_modal_invite_friends'
+            data-bs-target='#kt_modal_restricted_access'
           >
             <KTIcon iconName='plus' className='fs-3' />
             Add new persona
@@ -77,6 +78,7 @@ const PersonasTable: React.FC<Props> = ({className}) => {
 
                 const activeChannelsString = activeChannels.join(', ')
 
+                const personaLink = `/personas/${persona.id}/channel`
                 return (
                   <tr>
                     <td>
@@ -91,12 +93,12 @@ const PersonasTable: React.FC<Props> = ({className}) => {
                     <td>
                       <div className='d-flex align-items-center'>
                         <div className='symbol symbol-45px me-5'>
-                          <img src={toAbsoluteUrl('/media/avatars/300-14.jpg')} alt='' />
+                          <img src={toAbsoluteUrl(persona.image)} alt='' />
                         </div>
                         <div className='d-flex justify-content-start flex-column'>
-                          <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
+                          <Link to={personaLink} className='text-dark fw-bold text-hover-primary fs-6'>
                             {persona.name}
-                          </a>
+                          </Link>
                           <span className='text-muted fw-semibold text-muted d-block fs-7'>
                             {persona.type}
                           </span>
@@ -156,6 +158,8 @@ const PersonasTable: React.FC<Props> = ({className}) => {
                         <a
                           href='#'
                           className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm'
+                          data-bs-toggle='modal'
+                          data-bs-target='#kt_modal_restricted_access'
                         >
                           <KTIcon iconName='trash' className='fs-3' />
                         </a>

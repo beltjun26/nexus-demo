@@ -1,11 +1,13 @@
-import {Navigate, Outlet, Route, Routes} from 'react-router-dom'
+import {Navigate, Outlet, Route, Routes, useLocation, useParams} from 'react-router-dom'
 import {PageLink, PageTitle} from '../../../_metronic/layout/core'
-import {Overview} from './components/Overview'
+import {Channel} from './components/Channel'
 import {Projects} from './components/Projects'
 import {Campaigns} from './components/Campaigns'
 import {Documents} from './components/Documents'
 import {Connections} from './components/Connections'
 import {ProfileHeader} from './ProfileHeader'
+import { NexusDataContext } from '../../data/data'
+import { useContext } from 'react'
 
 const profileBreadCrumbs: Array<PageLink> = [
   {
@@ -22,64 +24,70 @@ const profileBreadCrumbs: Array<PageLink> = [
   },
 ]
 
-const ProfilePage = () => (
-  <Routes>
-    <Route
-      element={
-        <>
-          <ProfileHeader />
-          <Outlet />
-        </>
-      }
-    >
+const ProfilePage = () => {
+  const { id } = useParams()
+  console.log('id', id)
+  const nexusData = useContext(NexusDataContext)
+  
+  return (
+    <Routes>
       <Route
-        path='overview'
         element={
           <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Overview</PageTitle>
-            <Overview />
+            <ProfileHeader />
+            <Outlet />
           </>
         }
-      />
-      <Route
-        path='projects'
-        element={
-          <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Projects</PageTitle>
-            <Projects />
-          </>
-        }
-      />
-      <Route
-        path='campaigns'
-        element={
-          <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Campaigns</PageTitle>
-            <Campaigns />
-          </>
-        }
-      />
-      <Route
-        path='documents'
-        element={
-          <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Documents</PageTitle>
-            <Documents />
-          </>
-        }
-      />
-      <Route
-        path='connections'
-        element={
-          <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Connections</PageTitle>
-            <Connections />
-          </>
-        }
-      />
-      <Route index element={<Navigate to='/crafted/pages/profile/overview' />} />
-    </Route>
-  </Routes>
-)
+      >
+        <Route
+          path='channel'
+          element={
+            <>
+              <PageTitle breadcrumbs={profileBreadCrumbs}>Persona Profile</PageTitle>
+              <Channel />
+            </>
+          }
+        />
+        <Route
+          path='bio'
+          element={
+            <>
+              <PageTitle breadcrumbs={profileBreadCrumbs}>Persona Profile</PageTitle>
+              <Projects />
+            </>
+          }
+        />
+        <Route
+          path='conversations'
+          element={
+            <>
+              <PageTitle breadcrumbs={profileBreadCrumbs}>Persona Profile</PageTitle>
+              <Campaigns />
+            </>
+          }
+        />
+        {/* <Route
+          path='documents'
+          element={
+            <>
+              <PageTitle breadcrumbs={profileBreadCrumbs}>Documents</PageTitle>
+              <Documents />
+            </>
+          }
+        />
+        <Route
+          path='connections'
+          element={
+            <>
+              <PageTitle breadcrumbs={profileBreadCrumbs}>Connections</PageTitle>
+              <Connections />
+            </>
+          }
+        /> */}
+        <Route index element={<Navigate to='/crafted/pages/profile/channel' />} />
+      </Route>
+    </Routes>
+  )
+}
 
 export default ProfilePage
