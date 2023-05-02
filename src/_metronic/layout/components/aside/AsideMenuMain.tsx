@@ -12,9 +12,9 @@ export function AsideMenuMain() {
         fontIcon='bi-app-indicator'
       />
       <AsideMenuItem to='/personas' icon='black-right' title='Personas' fontIcon='bi-layers' />
-      <AsideMenuItem to='/dashboard' icon='black-right' title='Reports' fontIcon='bi-layers' />
-      <AsideMenuItem to='/dashboard' icon='black-right' title='Accounts' fontIcon='bi-layers' />
-      <AsideMenuItem to='/dashboard' icon='black-right' title='Support' fontIcon='bi-layers' />
+      <AsideMenuItem to='/reports' icon='black-right' title='Reports' fontIcon='bi-layers' />
+      <AsideMenuItem to='/accounts' icon='black-right' title='Accounts' fontIcon='bi-layers' />
+      <AsideMenuItem to='/support' icon='black-right' title='Support' fontIcon='bi-layers' />
     </>
   )
 }

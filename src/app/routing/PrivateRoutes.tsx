@@ -26,11 +26,12 @@ const PrivateRoutes = () => {
         {/* Pages */}
         <Route path='dashboard' element={<DashboardWrapper />} />
         <Route path='personas' element={<PersonasWrapper />} />
+        <Route path='users/*' element={<UsersPage />} />
         {/* <Route path='builder' element={<BuilderPageWrapper />} /> */}
         {/* <Route path='menu-test' element={<MenuTestPage />} /> */}
         {/* Lazy Modules */}
         <Route
-          path='crafted/pages/profile/*'
+          path='personas/:id/*'
           element={
             <SuspensedView>
               <ProfilePage />
