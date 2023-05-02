@@ -14,7 +14,7 @@ export function AsideMenuMain() {
       <AsideMenuItem to='/personas' icon='black-right' title='Personas' fontIcon='bi-layers' />
       <AsideMenuItem to='/dashboard' icon='black-right' title='Reports' fontIcon='bi-layers' />
       <AsideMenuItem to='/dashboard' icon='black-right' title='Accounts' fontIcon='bi-layers' />
-      <AsideMenuItem to='/dashboard' icon='black-right' title='Support' fontIcon='bi-layers' />
+      <AsideMenuItem to='/support' icon='black-right' title='Support' fontIcon='bi-layers' />
     </>
   )
 }
