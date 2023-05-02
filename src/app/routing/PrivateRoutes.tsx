@@ -8,7 +8,8 @@ import {getCSSVariableValue} from '../../_metronic/assets/ts/_utils'
 import {DisableSidebar} from '../../_metronic/layout/core'
 import {WithChildren} from '../../_metronic/helpers'
 import BuilderPageWrapper from '../pages/layout-builder/BuilderPageWrapper'
-import { PersonasWrapper } from '../pages/personas/PersonasWrapper'
+import {PersonasWrapper} from '../pages/personas/PersonasWrapper'
+import {SupportWrapper} from '../pages/support/SupportWrapper'
 
 const PrivateRoutes = () => {
   const ProfilePage = lazy(() => import('../modules/profile/ProfilePage'))
@@ -26,6 +27,7 @@ const PrivateRoutes = () => {
         {/* Pages */}
         <Route path='dashboard' element={<DashboardWrapper />} />
         <Route path='personas' element={<PersonasWrapper />} />
+        <Route path='support' element={<SupportWrapper />} />
         <Route path='users/*' element={<UsersPage />} />
         {/* <Route path='builder' element={<BuilderPageWrapper />} /> */}
         {/* <Route path='menu-test' element={<MenuTestPage />} /> */}
