@@ -2,7 +2,7 @@ import {Navigate, Outlet, Route, Routes, useLocation, useParams} from 'react-rou
 import {PageLink, PageTitle} from '../../../_metronic/layout/core'
 import {Channel} from './components/Channel'
 import {Bio} from './components/Bio'
-import {Campaigns} from './components/Campaigns'
+import {Conversations} from './components/Conversations'
 import {Documents} from './components/Documents'
 import {Connections} from './components/Connections'
 import {ProfileHeader} from './ProfileHeader'
@@ -61,7 +61,7 @@ const ProfilePage = () => {
           element={
             <>
               <PageTitle breadcrumbs={profileBreadCrumbs}>Persona Profile</PageTitle>
-              <Campaigns />
+              <Conversations />
             </>
           }
         />
