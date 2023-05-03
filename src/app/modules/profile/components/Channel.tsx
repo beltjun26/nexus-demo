@@ -1,15 +1,5 @@
 import React, { useContext } from 'react'
-import {
-  FeedsWidget2,
-  FeedsWidget3,
-  FeedsWidget4,
-  FeedsWidget5,
-  FeedsWidget6,
-  ChartsWidget1,
-  ListsWidget5,
-  ListsWidget2,
-} from '../../../../_metronic/partials/widgets'
-import { Card4 } from '../../../../_metronic/partials/content/cards/Card4'
+
 import { NexusDataContext } from '../../../data/data'
 import { useParams } from 'react-router-dom'
 import { ChannelCard } from '../../../../_metronic/partials/content/cards/ChannelCard'

@@ -1,7 +1,7 @@
 import {Navigate, Outlet, Route, Routes, useLocation, useParams} from 'react-router-dom'
 import {PageLink, PageTitle} from '../../../_metronic/layout/core'
 import {Channel} from './components/Channel'
-import {Projects} from './components/Projects'
+import {Bio} from './components/Bio'
 import {Campaigns} from './components/Campaigns'
 import {Documents} from './components/Documents'
 import {Connections} from './components/Connections'
@@ -27,7 +27,6 @@ const profileBreadCrumbs: Array<PageLink> = [
 const ProfilePage = () => {
   const { id } = useParams()
   console.log('id', id)
-  const nexusData = useContext(NexusDataContext)
   
   return (
     <Routes>
@@ -53,7 +52,7 @@ const ProfilePage = () => {
           element={
             <>
               <PageTitle breadcrumbs={profileBreadCrumbs}>Persona Profile</PageTitle>
-              <Projects />
+              <Bio />
             </>
           }
         />
