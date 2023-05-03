@@ -8,7 +8,7 @@ import { NexusDataContext } from '../../data/data'
 const ProfileHeader: React.FC = () => {
   const location = useLocation()
   const { id } = useParams()
-  console.log('id', id)
+
   const nexusData = useContext(NexusDataContext)
 
   const persona = nexusData.personas.find((persona) => persona.id === id)
