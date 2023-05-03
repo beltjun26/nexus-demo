@@ -10,6 +10,7 @@ import {WithChildren} from '../../_metronic/helpers'
 import BuilderPageWrapper from '../pages/layout-builder/BuilderPageWrapper'
 import {PersonasWrapper} from '../pages/personas/PersonasWrapper'
 import {SupportWrapper} from '../pages/support/SupportWrapper'
+import {AccountsWrapper} from '../pages/accounts/AccountsWrapper'
 
 const PrivateRoutes = () => {
   const ProfilePage = lazy(() => import('../modules/profile/ProfilePage'))
@@ -28,6 +29,7 @@ const PrivateRoutes = () => {
         <Route path='dashboard' element={<DashboardWrapper />} />
         <Route path='personas' element={<PersonasWrapper />} />
         <Route path='support' element={<SupportWrapper />} />
+        <Route path='accounts' element={<AccountsWrapper />} />
         <Route path='users/*' element={<UsersPage />} />
         {/* <Route path='builder' element={<BuilderPageWrapper />} /> */}
         {/* <Route path='menu-test' element={<MenuTestPage />} /> */}
