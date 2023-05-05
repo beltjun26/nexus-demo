@@ -3,16 +3,16 @@ import {Navigate, Route, Routes} from 'react-router-dom'
 import {MasterLayout} from '../../_metronic/layout/MasterLayout'
 import TopBarProgress from 'react-topbar-progress-indicator'
 import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
-import {MenuTestPage} from '../pages/MenuTestPage'
 import {getCSSVariableValue} from '../../_metronic/assets/ts/_utils'
 import {DisableSidebar} from '../../_metronic/layout/core'
 import {WithChildren} from '../../_metronic/helpers'
-import BuilderPageWrapper from '../pages/layout-builder/BuilderPageWrapper'
 import {PersonasWrapper} from '../pages/personas/PersonasWrapper'
 import {SupportWrapper} from '../pages/support/SupportWrapper'
+import {ReportsWrapper} from '../pages/reports/ReportsWrapper'
 
 const PrivateRoutes = () => {
   const ProfilePage = lazy(() => import('../modules/profile/ProfilePage'))
+  const ReportDetailPage = lazy(() => import('../modules/reportDetail/ReportDetailPage'))
   const WizardsPage = lazy(() => import('../modules/wizards/WizardsPage'))
   const AccountPage = lazy(() => import('../modules/accounts/AccountPage'))
   const WidgetsPage = lazy(() => import('../modules/widgets/WidgetsPage'))
@@ -27,6 +27,7 @@ const PrivateRoutes = () => {
         {/* Pages */}
         <Route path='dashboard' element={<DashboardWrapper />} />
         <Route path='personas' element={<PersonasWrapper />} />
+        <Route path='reports' element={<ReportsWrapper />} />
         <Route path='support' element={<SupportWrapper />} />
         <Route path='users/*' element={<UsersPage />} />
         {/* <Route path='builder' element={<BuilderPageWrapper />} /> */}
@@ -37,6 +38,14 @@ const PrivateRoutes = () => {
           element={
             <SuspensedView>
               <ProfilePage />
+            </SuspensedView>
+          }
+        />
+        <Route
+          path='reports/details/:reportId/*'
+          element={
+            <SuspensedView>
+              <ReportDetailPage />
             </SuspensedView>
           }
         />

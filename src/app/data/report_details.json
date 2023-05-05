@@ -1,6 +1,7 @@
 {
-  "reports_list_data": [{
-    "211":{
+  "reports_list_data": [
+    {
+      "report_id": "211",
       "user_phone": "+16464237723",
       "user_username": "",
       "channel": "sms",
@@ -199,7 +200,8 @@
         }
       }
     },
-      "212":{
+      {
+      "report_id": "211",
       "user_phone": "",
       "user_username": "bad_guy#1234",
       "channel": "discord",
@@ -304,8 +306,9 @@
         "is_proxy": false
       },
       "blochain_info": {
-        "bitcoin": ""         
+        "bitcoin": null         
       }
     }
-  }]
+  
+]
 }

@@ -2,7 +2,7 @@
   "persona_data": [
     {
       "id": "1",
-      "name": "Jason Smith",
+      "name": "Jason",
       "image": "/media/avatars/persona-4.jpg",
       "type": "Sextortion",
       "status": "active",
@@ -91,7 +91,7 @@
     },
     {
       "id": "2",
-      "name": "Dominique Doe",
+      "name": "Dominique",
       "image": "/media/avatars/persona-2.jpg",
       "type": "Child Predation",
       "status": "active",
@@ -188,7 +188,7 @@
     },
     {
       "id": "3",
-      "name": "Dorothy Charles",
+      "name": "Dorothy",
       "image": "/media/avatars/persona-3.jpg",
       "type": "Elderly Financial",
       "status": "active",
