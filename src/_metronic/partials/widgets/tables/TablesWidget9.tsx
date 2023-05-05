@@ -60,8 +60,8 @@ const TablesWidget9: React.FC<Props> = ({className}) => {
                 </th>
                 <th className='min-w-150px'>Persona</th>
                 <th className='min-w-120px'>Channels</th>
-                <th className='min-w-120px'>Total Active conversations</th>
-                <th className='min-w-120px'>Total Lifetime conversations</th>
+                <th className='min-w-120px'>Total Active Conversations</th>
+                <th className='min-w-120px'>Total Lifetime Conversations</th>
                 <th className='min-w-120px'>Status</th>
                 <th className='min-w-100px text-end'>Actions</th>
               </tr>
