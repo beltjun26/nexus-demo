@@ -39,14 +39,14 @@ const ProfileHeader: React.FC = () => {
                 <div className='d-flex flex-wrap fw-bold fs-6 mb-4 pe-2'>
                   <a
                     href='#'
-                    className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'
+                    className='d-flex align-items-center text-gray-800 text-hover-primary me-5 mb-2'
                   >
                     <KTIcon iconName='profile-circle' className='fs-4 me-1' />
                     {persona?.type}
                   </a>
                   <a
                     href='#'
-                    className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'
+                    className='d-flex align-items-center text-gray-800 text-hover-primary me-5 mb-2'
                   >
                     <KTIcon iconName='geolocation' className='fs-4 me-1' />
                     {persona?.bio.city},{persona?.bio.state},
@@ -96,28 +96,28 @@ const ProfileHeader: React.FC = () => {
             <div className='d-flex flex-wrap flex-stack'>
               <div className='d-flex flex-column flex-grow-1 pe-8'>
                 <div className='d-flex flex-wrap'>
-                  <div className='border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
+                  <div className='border border-gray-500 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
                     <div className='d-flex align-items-center'>
-                      <div className='fs-2 fw-bolder'>{persona?.status.toUpperCase()}</div>
+                      <div className={`fs-2 fw-bolder ${persona?.status === 'active' ? 'text-success' : 'text-danger'}`}>{persona?.status.toUpperCase()}</div>
                     </div>
 
-                    <div className='fw-bold fs-6 text-gray-400'>Status</div>
+                    <div className='fw-bold fs-6 text-gray-800'>Status</div>
                   </div>
 
-                  <div className='border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
+                  <div className='border border-gray-500 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
                     <div className='d-flex align-items-center'>
                       <div className='fs-2 fw-bolder'>{persona?.total_active_conversations}</div>
                     </div>
 
-                    <div className='fw-bold fs-6 text-gray-400'>Active Conversation</div>
+                    <div className='fw-bold fs-6 text-gray-800'>Active Conversation</div>
                   </div>
 
-                  <div className='border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
+                  <div className='border border-gray-500 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
                     <div className='d-flex align-items-center'>
                       <div className='fs-2 fw-bolder'>{persona?.total_lifetime_conversations}</div>
                     </div>
 
-                    <div className='fw-bold fs-6 text-gray-400'>Lifetime Conversation</div>
+                    <div className='fw-bold fs-6 text-gray-800'>Lifetime Conversation</div>
                   </div>
                 </div>
               </div>

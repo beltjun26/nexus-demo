@@ -46,7 +46,7 @@ const TablesWidget9: React.FC<Props> = ({className}) => {
           <table className='table table-row-dashed table-row-gray-300 align-middle gs-0 gy-4'>
             {/* begin::Table head */}
             <thead>
-              <tr className='fw-bold text-muted'>
+              <tr className='fw-bold text-muted text-gray-800'>
                 <th className='w-25px'>
                   <div className='form-check form-check-sm form-check-custom form-check-solid'>
                     <input
@@ -136,7 +136,7 @@ const TablesWidget9: React.FC<Props> = ({className}) => {
                       </div>
                     </td>
                     <td className=''>
-                      <div className='text-dark fw-bold text-hover-primary d-block fs-6'>
+                      <div className={`fw-bold text-hover-primary d-block fs-6 ${persona.status === 'active' ? 'text-success' : 'text-danger'}`}>
                         {persona.status.toUpperCase()}
                       </div>
                     </td>

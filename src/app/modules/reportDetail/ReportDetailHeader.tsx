@@ -42,28 +42,28 @@ const ReportDetailHeader: React.FC = () => {
                 <div className='d-flex flex-wrap fw-bold fs-6 mb-4 pe-2'>
                 <a
                     href='#'
-                    className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'
+                    className='d-flex align-items-center text-gray-800 text-hover-primary me-5 mb-2'
                   >
                     <KTIcon iconName='profile-circle' className='fs-4 me-1' />
                     {persona?.name}
                   </a>
                   <a
                     href='#'
-                    className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'
+                    className='d-flex align-items-center text-gray-800 text-hover-primary me-5 mb-2'
                   >
                     <KTIcon iconName='profile-circle' className='fs-4 me-1' />
                     {reportDetail?.type}
                   </a>
                   <a
                     href='#'
-                    className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'
+                    className='d-flex align-items-center text-gray-800 text-hover-primary me-5 mb-2'
                   >
                     <KTIcon iconName='profile-circle' className='fs-4 me-1' />
                     {reportDetail?.channel === 'sms' ? reportDetail?.user_phone : reportDetail?.user_username}
                   </a>
                   <a
                     href='#'
-                    className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'
+                    className='d-flex align-items-center text-gray-800 text-hover-primary me-5 mb-2'
                   >
                     <KTIcon iconName='profile-circle' className='fs-4 me-1' />
                     {reportDetail?.channel.toUpperCase()}
