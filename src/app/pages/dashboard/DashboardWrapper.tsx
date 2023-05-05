@@ -37,7 +37,7 @@ const DashboardPage = () => (
         <HighRiskWidget
           chartHeight='100px'
           className='card-xl-stretch mb-xl-10'
-          backGroundColor='#F7D9E3'
+          backGroundColor='#CBD4F4'
         />
       </div>
       {/*end::Col*/}

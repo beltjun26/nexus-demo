@@ -113,7 +113,7 @@ const PersonasTable: React.FC<Props> = ({className}) => {
                         Web, UI/UX Design
                       </span> */}
                     </td>
-                    <td className='text-end'>
+                    <td className=''>
                       {/* <div className='d-flex flex-column w-100 me-2'>
                         <div className='d-flex flex-stack mb-2'>
                           <span className='text-muted me-2 fs-7 fw-semibold'>50%</span>
@@ -131,12 +131,12 @@ const PersonasTable: React.FC<Props> = ({className}) => {
                         {persona.total_active_conversations}
                       </div>
                     </td>
-                    <td className='text-end'>
+                    <td className=''>
                       <div className='text-dark fw-bold text-hover-primary d-block fs-6'>
                         {persona.total_lifetime_conversations}
                       </div>
                     </td>
-                    <td className='text-end'>
+                    <td className=''>
                       <div className='text-dark fw-bold text-hover-primary d-block fs-6'>
                         {persona.status}
                       </div>

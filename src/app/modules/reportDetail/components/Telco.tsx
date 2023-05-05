@@ -150,16 +150,6 @@ export function Telco() {
               <span className='fw-bolder fs-6 text-dark'>{reportDetail?.telco_info.timezone_utc_offset}</span>
             </div>
           </div>
-
-          <div className='row mb-7'>
-            <label className='col-lg-4 fw-bold text-muted'>TimeZone UTC Offset</label>
-
-          
-            <div className='col-lg-8'>
-              <span className='fw-bolder fs-6 text-dark'>{reportDetail?.telco_info.timezone_utc_offset}</span>
-            </div>
-          </div>
-
           <div className='row mb-7'>
             <label className='col-lg-4 fw-bold text-muted'>Administrative Area Level 1 short</label>
 

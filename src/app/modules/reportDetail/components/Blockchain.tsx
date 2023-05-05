@@ -131,131 +131,239 @@ export function Blockchain() {
         <h3 className='fw-bolder my-2'>Transactions</h3>
       </div>
 
-      <div className='card mb-5 mb-xl-10' id='kt_profile_details_view'>
-        <div className='card-header cursor-pointer'>
-          <div className='card-title m-0'>
-            <h3 className='fw-bolder m-0'>Transaction Detail</h3>
+      {reportDetail?.blochain_info.bitcoin?.recent_tx.map((transaction, index) => (
+        <div className='card mb-5 mb-xl-10' id='kt_profile_details_view'>
+          <div className='card-header cursor-pointer'>
+            <div className='card-title m-0'>
+              <h3 className='fw-bolder m-0'>Transaction Detail ({transaction.txid})</h3>
+            </div>
+          </div>
+
+          <div className='card-body p-9'>
+            <div className='row mb-7'>
+              <label className='col-lg-4 fw-bold text-muted'>txid</label>
+
+              <div className='col-lg-8'>
+                <span className='fw-bolder fs-6 text-dark'>{transaction.txid}</span>
+              </div>
+            </div>
+
+            <div className='row mb-7'>
+              <label className='col-lg-4 fw-bold text-muted'>version</label>
+
+              <div className='col-lg-8 fv-row'>
+                <span className='fw-bold fs-6'>{transaction.version}</span>
+              </div>
+            </div>
+
+            <div className='row mb-7'>
+              <label className='col-lg-4 fw-bold text-muted'>locktime</label>
+
+              <div className='col-lg-8 d-flex align-items-center'>
+                <span className='fw-bolder fs-6 me-2'>{transaction.locktime}</span>
+              </div>
+            </div>
+
+            <div className='row mb-7'>
+              <label className='col-lg-4 fw-bold text-muted'>size</label>
+
+              <div className='col-lg-8 d-flex align-items-center'>
+                <span className='fw-bolder fs-6 me-2'>{transaction.size}</span>
+              </div>
+            </div>
+
+            <div className='row mb-7'>
+              <label className='col-lg-4 fw-bold text-muted'>Weight</label>
+
+              <div className='col-lg-8 d-flex align-items-center'>
+                <span className='fw-bolder fs-6 me-2'>{transaction.weight}</span>
+              </div>
+            </div>
+
+            <div className='row mb-7'>
+              <label className='col-lg-4 fw-bold text-muted'>Fee</label>
+
+              <div className='col-lg-8 d-flex align-items-center'>
+                <span className='fw-bolder fs-6 me-2'>{transaction.fee}</span>
+              </div>
+            </div>
+
+            <div className='accordion accordion-icon-toggle' id='kt_accordion_2'>
+              <div className='mb-5'>
+                <div
+                  className='accordion-header py-3 d-flex collapsed'
+                  data-bs-toggle='collapse'
+                  data-bs-target={`#${transaction.txid}-vin`}
+                >
+                  <span className='accordion-icon'>
+                    <KTSVG
+                      className='svg-icon svg-icon-4'
+                      path='/media/icons/duotune/arrows/arr064.svg'
+                    />
+                  </span>
+                  <h3 className='fs-4 text-gray-800 fw-bold mb-0 ms-4'>VIN</h3>
+                </div>
+                <div
+                  id={`${transaction.txid}-vin`}
+                  className='collapse fs-6 ps-10'
+                  data-bs-parent='#kt_accordion_2'
+                >
+                  {/* Insert accordion */}
+
+                  {transaction.vin.map((vin, index) => (
+                      <>
+                        <div className='card-title mb-3'>
+                          <h5 className='fw-bolder m-0'>Transaction Detail</h5>
+                        </div>
+                        <div className='row mb-2'>
+                          <label className='col-lg-4 fw-bold text-muted'>Transaction ID</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vin.txid}</span>
+                          </div>
+                        </div>
+                        <div className='row mb-2'>
+                          <label className='col-lg-4 fw-bold text-muted'>vout</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vin.vout}</span>
+                          </div>
+                        </div>
+                        <div className='row mb-2'>
+                          <label className='col-lg-4 fw-bold text-muted'>Sequence</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vin.sequence}</span>
+                          </div>
+                        </div>
+                        <div className='row mb-2'>
+                          <label className='col-lg-4 fw-bold text-muted'>Script Signature</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vin.scriptsig}</span>
+                          </div>
+                        </div>
+                        <div className='row mb-2'>
+                          <label className='col-lg-4 fw-bold text-muted'>Script Signature ASM</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vin.scriptsig_asm}</span>
+                          </div>
+                        </div>
+                        <div className='row mb-2'>
+                          <label className='col-lg-4 fw-bold text-muted'>Script Script Pubkey</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vin.prevout.scriptpubkey}</span>
+                          </div>
+                        </div>
+                        <div className='row mb-2'>
+                          <label className='col-lg-4 fw-bold text-muted'>Script Script Pubkey ASM</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vin.prevout.scriptpubkey_asm}</span>
+                          </div>
+                        </div>
+                        <div className='row mb-2'>
+                          <label className='col-lg-4 fw-bold text-muted'>Script Script Pubkey Type</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vin.prevout.scriptpubkey_type}</span>
+                          </div>
+                        </div>
+                        <div className='row mb-2'>
+                          <label className='col-lg-4 fw-bold text-muted'>Script Script Pubkey Address</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vin.prevout.scriptpubkey_address}</span>
+                          </div>
+                        </div>
+                        <div className='row mb-6'>
+                          <label className='col-lg-4 fw-bold text-muted'>Is Coint Base</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vin.is_coinbase ? 'True' : 'False'}</span>
+                          </div>
+                        </div>
+                      </>
+                  ))}
+                </div>
+              </div>
+              <div className='mb-5'>
+                <div
+                  className='accordion-header py-3 d-flex collapsed'
+                  data-bs-toggle='collapse'
+                  data-bs-target={`#${transaction.txid}-vout`}
+                >
+                  <span className='accordion-icon'>
+                    <KTSVG
+                      className='svg-icon svg-icon-4'
+                      path='/media/icons/duotune/arrows/arr064.svg'
+                    />
+                  </span>
+                  <h3 className='fs-4 text-gray-800 fw-bold mb-0 ms-4'>VOUT</h3>
+                </div>
+                <div
+                  id={`${transaction.txid}-vout`}
+                  className='collapse fs-6 ps-10'
+                  data-bs-parent='#kt_accordion_2'
+                >
+                  {/* Insert accordion */}
+
+                  {transaction.vout.map((vout, index) => (
+                      <>
+                        <div className='card-title mb-3'>
+                          <h5 className='fw-bolder m-0'>Transaction Detail</h5>
+                        </div>
+
+                        <div className='row mb-2'>
+                          <label className='col-lg-4 fw-bold text-muted'>Value</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vout.value}</span>
+                          </div>
+                        </div>
+
+                        <div className='row mb-2'>
+                          <label className='col-lg-4 fw-bold text-muted'>Script Pubkey</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vout.scriptpubkey}</span>
+                          </div>
+                        </div>
+
+                        <div className='row mb-2'>
+                          <label className='col-lg-4 fw-bold text-muted'>Script Pubkey ASM</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vout.scriptpubkey_asm}</span>
+                          </div>
+                        </div>
+
+                        <div className='row mb-2'>
+                          <label className='col-lg-4 fw-bold text-muted'>Script Pubkey Type</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vout.scriptpubkey_type}</span>
+                          </div>
+                        </div>
+
+                        <div className='row mb-6'>
+                          <label className='col-lg-4 fw-bold text-muted'>Script Pubkey Address</label>
+
+                          <div className='col-lg-8 d-flex align-items-center'>
+                            <span className='fw-bolder fs-6 me-2'>{vout.scriptpubkey_address}</span>
+                          </div>
+                        </div>
+
+                      </>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div className='card-body p-9'>
-          <div className='row mb-7'>
-            <label className='col-lg-4 fw-bold text-muted'>txid</label>
-
-            <div className='col-lg-8'>
-              <span className='fw-bolder fs-6 text-dark'>
-                {reportDetail?.blochain_info.bitcoin?.recent_tx[0].txid}
-              </span>
-            </div>
-          </div>
-
-          <div className='row mb-7'>
-            <label className='col-lg-4 fw-bold text-muted'>version</label>
-
-            <div className='col-lg-8 fv-row'>
-              <span className='fw-bold fs-6'>
-                {reportDetail?.blochain_info.bitcoin?.recent_tx[0].version}
-              </span>
-            </div>
-          </div>
-
-          <div className='row mb-7'>
-            <label className='col-lg-4 fw-bold text-muted'>locktime</label>
-
-            <div className='col-lg-8 d-flex align-items-center'>
-              <span className='fw-bolder fs-6 me-2'>
-                {reportDetail?.blochain_info.bitcoin?.recent_tx[0].locktime}
-              </span>
-            </div>
-          </div>
-
-          <div className='row mb-7'>
-            <label className='col-lg-4 fw-bold text-muted'>size</label>
-
-            <div className='col-lg-8 d-flex align-items-center'>
-              <span className='fw-bolder fs-6 me-2'>
-                {reportDetail?.blochain_info.bitcoin?.recent_tx[0].size}
-              </span>
-            </div>
-          </div>
-
-          <div className='row mb-7'>
-            <label className='col-lg-4 fw-bold text-muted'>Weight</label>
-
-            <div className='col-lg-8 d-flex align-items-center'>
-              <span className='fw-bolder fs-6 me-2'>
-                {reportDetail?.blochain_info.bitcoin?.recent_tx[0].weight}
-              </span>
-            </div>
-          </div>
-
-          <div className='row mb-7'>
-            <label className='col-lg-4 fw-bold text-muted'>Fee</label>
-
-            <div className='col-lg-8 d-flex align-items-center'>
-              <span className='fw-bolder fs-6 me-2'>
-                {reportDetail?.blochain_info.bitcoin?.recent_tx[0].fee}
-              </span>
-            </div>
-          </div>
-
-          <div className='accordion accordion-icon-toggle' id='kt_accordion_2'>
-            <div className='mb-5'>
-              <div
-                className='accordion-header py-3 d-flex collapsed'
-                data-bs-toggle='collapse'
-                data-bs-target='#kt_accordion_2_item_2'
-              >
-                <span className='accordion-icon'>
-                  <KTSVG
-                    className='svg-icon svg-icon-4'
-                    path='/media/icons/duotune/arrows/arr064.svg'
-                  />
-                </span>
-                <h3 className='fs-4 text-gray-800 fw-bold mb-0 ms-4'>VOUT</h3>
-              </div>
-              <div
-                id='kt_accordion_2_item_2'
-                className='collapse fs-6 ps-10'
-                data-bs-parent='#kt_accordion_2'
-              >
-                {/* {reportDetail?.blochain_info.bitcoin} */}
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                unknown printer took a galley of type and scrambled it to make a type specimen book.
-                It has survived not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged.
-              </div>
-            </div>
-            <div className='mb-5'>
-              <div
-                className='accordion-header py-3 d-flex collapsed'
-                data-bs-toggle='collapse'
-                data-bs-target='#kt_accordion_2_item_3'
-              >
-                <span className='accordion-icon'>
-                  <KTSVG
-                    className='svg-icon svg-icon-4'
-                    path='/media/icons/duotune/arrows/arr064.svg'
-                  />
-                </span>
-                <h3 className='fs-4 text-gray-800 fw-bold mb-0 ms-4'>VIN</h3>
-              </div>
-              <div
-                id='kt_accordion_2_item_3'
-                className='collapse fs-6 ps-10'
-                data-bs-parent='#kt_accordion_2'
-              >
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                unknown printer took a galley of type and scrambled it to make a type specimen book.
-                It has survived not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      ))}
     </>
   )
 }

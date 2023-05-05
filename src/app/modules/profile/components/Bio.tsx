@@ -84,6 +84,45 @@ export function Bio() {
           </div>
 
           <div className='row mb-7'>
+            <label className='col-lg-4 fw-bold text-muted'>Pet Data</label>
+
+          </div>
+
+          {persona?.bio.pet_data !== undefined && (
+            <>
+              <div className='row mb-7'>
+                <label className='col-lg-3 offset-lg-1 fw-bold text-muted'>Type</label>
+
+              
+                <div className='col-lg-8'>
+                  <span className='fw-bolder fs-6 text-dark'>{persona?.bio.pet_data.pet.type}</span>
+                </div>
+              </div>
+
+              <div className='row mb-7'>
+                <label className='col-lg-3 offset-lg-1 fw-bold text-muted'>Name</label>
+
+              
+                <div className='col-lg-8'>
+                  <span className='fw-bolder fs-6 text-dark'>{persona?.bio.pet_data.pet.name}</span>
+                </div>
+              </div>
+
+              <div className='row mb-7'>
+                <label className='col-lg-3 offset-lg-1 fw-bold text-muted'>Age</label>
+
+              
+                <div className='col-lg-8'>
+                  <span className='fw-bolder fs-6 text-dark'>{persona?.bio.pet_data.pet.age}</span>
+                </div>
+              </div>
+            </>
+          )}
+          
+
+          
+
+          <div className='row mb-7'>
             <label className='col-lg-4 fw-bold text-muted'>City</label>
 
           
