@@ -62,8 +62,8 @@ const PersonasTable: React.FC<Props> = ({className}) => {
                 </th>
                 <th className='min-w-150px'>Persona</th>
                 <th className='min-w-120px'>Channels</th>
-                <th className='min-w-120px'>Total Active conversations</th>
-                <th className='min-w-120px'>Total Lifetime conversations</th>
+                <th className='min-w-120px'>Total Active Conversations</th>
+                <th className='min-w-120px'>Total Lifetime Conversations</th>
                 <th className='min-w-120px'>Status</th>
                 <th className='min-w-100px text-end'>Actions</th>
               </tr>
@@ -74,7 +74,7 @@ const PersonasTable: React.FC<Props> = ({className}) => {
               {nexusData.personas.map((persona, index) => {
                 const activeChannels = Object.entries(persona.channels)
                   .filter(([_, channel]) => channel.channel_status === 'active')
-                  .map(([name, _]) => name)
+                  .map(([name, _]) => name.toUpperCase())
 
                 const activeChannelsString = activeChannels.join(', ')
 
@@ -138,7 +138,7 @@ const PersonasTable: React.FC<Props> = ({className}) => {
                     </td>
                     <td className=''>
                       <div className='text-dark fw-bold text-hover-primary d-block fs-6'>
-                        {persona.status}
+                        {persona.status.toUpperCase()}
                       </div>
                     </td>
                     <td>

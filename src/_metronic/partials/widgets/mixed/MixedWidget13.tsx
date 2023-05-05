@@ -66,11 +66,10 @@ const MixedWidget13: React.FC<Props> = ({className, backGroundColor, chartHeight
         <div className='pt-5'>
 
           {/* begin::Number */}
-          <span className='text-dark fw-bolder fs-3x me-2 lh-0'>560</span>
+          <span className='text-dark fw-bolder fs-3x me-2 lh-0'>47</span>
           {/* end::Number */}
 
           {/* begin::Text */}
-          <span className='text-dark fw-bolder fs-6 lh-0'>+ 28 this week</span>
           {/* end::Text */}
         </div>
         {/* end::Stats */}

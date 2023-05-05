@@ -92,7 +92,7 @@
     {
       "id": "2",
       "name": "Dominique",
-      "image": "/media/avatars/persona-2.jpg",
+      "image": "/media/avatars/persona-3.jpg",
       "type": "Child Predation",
       "status": "active",
       "total_active_conversations": "17",
@@ -189,11 +189,11 @@
     {
       "id": "3",
       "name": "Dorothy",
-      "image": "/media/avatars/persona-3.jpg",
+      "image": "/media/avatars/persona-2.jpg",
       "type": "Elderly Financial",
       "status": "active",
-      "total_active_conversations": "2",
-      "total_lifetime_conversations": "5",
+      "total_active_conversations": "12",
+      "total_lifetime_conversations": "27",
       "recent_activity": "April 21, 2023 - 10:19 ET",
       "channels": {
         "discord": {
@@ -275,7 +275,7 @@
         },
         "sports": "",
         "city": "Greenville",
-        "state": "North Carolina",
+        "state": "South Carolina",
         "zip_code": "29601",
         "mobile_phone": "864-527-8411"
       }

@@ -47,8 +47,8 @@ const ReportsList: React.FC<Props> = ({className}) => {
                 </th>
                 <th className='min-w-150px'>Persona</th>
                 <th className='min-w-120px'>Channels</th>
-                <th className='min-w-120px'>Predator Score</th>
-                <th className='min-w-120px'>Predator Label</th>
+                <th className='min-w-120px'>Threat Score</th>
+                <th className='min-w-120px'>Threat Level</th>
                 <th className='min-w-120px'>Last Updated</th>
               </tr>
             </thead>
@@ -86,13 +86,13 @@ const ReportsList: React.FC<Props> = ({className}) => {
                     </td>
                     <td>
                       <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6'>
-                        {report.channel}
+                        {report.channel.toUpperCase()}
                       </a>
                       {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
                         Web, UI/UX Design
                       </span> */}
                     </td>
-                    <td className='text-end'>
+                    <td className=''>
                       {/* <div className='d-flex flex-column w-100 me-2'>
                         <div className='d-flex flex-stack mb-2'>
                           <span className='text-muted me-2 fs-7 fw-semibold'>50%</span>
@@ -110,12 +110,12 @@ const ReportsList: React.FC<Props> = ({className}) => {
                         {report.predator_score}
                       </div>
                     </td>
-                    <td className='text-end'>
+                    <td className=''>
                       <div className='text-dark fw-bold text-hover-primary d-block fs-6'>
                         {report.predator_label}
                       </div>
                     </td>
-                    <td className='text-end'>
+                    <td className=''>
                       <div className='text-dark fw-bold text-hover-primary d-block fs-6'>
                         {report.last_updated}
                       </div>

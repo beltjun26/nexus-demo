@@ -17,7 +17,7 @@ export function Channel() {
           <ChannelCard
             icon='/media/svg/brand-logos/discord.svg'
             title='Discord'
-            channelStatus={persona?.channels.discord.channel_status ?? ''}
+            channelStatus={persona?.channels.discord.channel_status.toUpperCase() ?? ''}
             activeConversations={persona?.channels.discord.active_conversations ?? ''}
             lifetimeConversation={persona?.channels.discord.lifetime_conversations ?? ''}
           />
@@ -26,7 +26,7 @@ export function Channel() {
           <ChannelCard
             icon='/media/svg/brand-logos/twitch.svg'
             title='Twitch'
-            channelStatus={persona?.channels.twitch.channel_status ?? ''}
+            channelStatus={persona?.channels.twitch.channel_status.toUpperCase() ?? ''}
             activeConversations={persona?.channels.twitch.active_conversations ?? ''}
             lifetimeConversation={persona?.channels.twitch.lifetime_conversations ?? ''}
           />
@@ -35,7 +35,7 @@ export function Channel() {
           <ChannelCard
             icon='/media/svg/brand-logos/telegram.svg'
             title='Telegram'
-            channelStatus={persona?.channels.telegram.channel_status ?? ''}
+            channelStatus={persona?.channels.telegram.channel_status.toUpperCase() ?? ''}
             activeConversations={persona?.channels.telegram.active_conversations ?? ''}
             lifetimeConversation={persona?.channels.telegram.lifetime_conversations ?? ''}
           />
@@ -46,7 +46,7 @@ export function Channel() {
           <ChannelCard
             icon='/media/svg/brand-logos/sms.svg'
             title='SMS'
-            channelStatus={persona?.channels.sms.channel_status ?? ''}
+            channelStatus={persona?.channels.sms.channel_status.toUpperCase() ?? ''}
             activeConversations={persona?.channels.sms.active_conversations ?? ''}
             lifetimeConversation={persona?.channels.sms.lifetime_conversations ?? ''}
           />
@@ -55,7 +55,7 @@ export function Channel() {
           <ChannelCard
             icon='/media/svg/brand-logos/voice.svg'
             title='Voice'
-            channelStatus={persona?.channels.voice.channel_status ?? ''}
+            channelStatus={persona?.channels.voice.channel_status.toUpperCase() ?? ''}
             activeConversations={persona?.channels.voice.active_conversations ?? ''}
             lifetimeConversation={persona?.channels.voice.lifetime_conversations ?? ''}
           />

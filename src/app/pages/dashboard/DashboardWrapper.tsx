@@ -66,9 +66,9 @@ const DashboardPage = () => (
 const DashboardWrapper = () => {
   return (
     <EnableSidebar>
-      <PageTitle description='Welcome to hypernexus' breadcrumbs={[]}>
+      {/* <PageTitle description='Welcome to hypernexus' breadcrumbs={[]}>
         Hello, Paul
-      </PageTitle>
+      </PageTitle> */}
       <DashboardPage />
     </EnableSidebar>
   )

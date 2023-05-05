@@ -7,7 +7,7 @@
       "channel": "sms",
       "type": "Sextortion",
       "persona_id": "1",
-      "persona": "Jason Smith",
+      "persona": "Jason",
       "persona_phone": "323-909-4744",
       "persona_account_name": "",
       "predator_score": "78",
@@ -45,7 +45,7 @@
         "administrative_area_level_2": "Nassau County",
         "administrative_area_level_1": "New York",
         "line_type": "fixed_or_mobile",
-        "dialcode_e164": "+16464237723",
+        "dialcode_e164": "+1 6464237723",
         "point_of_interest": null
       },
       "geo_info_ip": {
@@ -207,7 +207,7 @@
       "channel": "discord",
       "type": "Child Predation",
       "persona_id": "2",
-      "persona": "Dominique Doe",
+      "persona": "Dominique",
       "persona_phone": "",
       "persona_account_name": "em0d0mUnique",
       "predator_score": "41",
@@ -288,7 +288,7 @@
         "administrative_area_level_2": "Nassau County",
         "administrative_area_level_1": "New York",
         "line_type": "fixed_or_mobile",
-        "dialcode_e164": "+16464237723",
+        "dialcode_e164": "+1 6464237723",
         "point_of_interest": null
       },
       "geo_info_ip": {

@@ -26,7 +26,7 @@ const AsideDefault = () => {
         {/* begin::Logo */}
         <Link to='/dashboard'>
           <h1 style={{fontSize: '2.3rem'}}>
-            hypernexus.
+            HyperNexus
           </h1>
         </Link>
         {/* end::Logo */}

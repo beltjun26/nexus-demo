@@ -70,7 +70,7 @@ export function Bio() {
             <label className='col-lg-4 fw-bold text-muted'>Music</label>
 
             <div className='col-lg-8'>
-              <span className='fw-bolder fs-6 text-dark'>{persona?.bio.music}</span>
+              <span className='fw-bolder fs-6 text-dark'>{persona?.bio.music.join(', ')}</span>
             </div>
           </div>
 
@@ -79,7 +79,7 @@ export function Bio() {
 
           
             <div className='col-lg-8'>
-              <span className='fw-bolder fs-6 text-dark'>{persona?.bio.hobbies.join(',')}</span>
+              <span className='fw-bolder fs-6 text-dark'>{persona?.bio.hobbies.join(', ')}</span>
             </div>
           </div>
 
@@ -153,7 +153,7 @@ export function Bio() {
 
           
             <div className='col-lg-8'>
-              <span className='fw-bolder fs-6 text-dark'>{persona?.bio.mobile_phone}</span>
+              <span className='fw-bolder fs-6 text-dark'>+1 {persona?.bio.mobile_phone}</span>
             </div>
           </div>
         </div>

@@ -29,10 +29,10 @@ export function Telco() {
           </div>
 
           <div className='row mb-7'>
-            <label className='col-lg-4 fw-bold text-muted'>Neightboor</label>
+            <label className='col-lg-4 fw-bold text-muted'>Neighbor</label>
 
             <div className='col-lg-8 fv-row'>
-              <span className='fw-bold fs-6'>{reportDetail?.telco_info.neighborhood}</span>
+              <span className='fw-bold fs-6'>{reportDetail?.telco_info.neighborhood ?? '-'}</span>
             </div>
           </div>
 
@@ -226,7 +226,7 @@ export function Telco() {
           </div>
 
           <div className='row mb-7'>
-            <label className='col-lg-4 fw-bold text-muted'>Dialcode e164</label>
+            <label className='col-lg-4 fw-bold text-muted'>Dialcode e1646</label>
           
             <div className='col-lg-8'>
               <span className='fw-bolder fs-6 text-dark'>{reportDetail?.telco_info.dialcode_e164}</span>

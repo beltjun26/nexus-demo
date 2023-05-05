@@ -44,8 +44,8 @@ export function Conversations() {
             return (
               <ConversationCard
                 image={`/media/svg/brand-logos/${conversation.channel}.svg`}
-                title={conversation.channel}
-                description={`# ${conversation.predator_score}`}
+                title={conversation.channel.toUpperCase()}
+                description={`Threat Level: ${conversation.predator_score}`}
                 status='down'
                 predatorLabel={conversation.predator_label}
                 progress={0.5}

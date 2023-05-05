@@ -45,7 +45,7 @@ const ReportDetailHeader: React.FC = () => {
                     className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'
                   >
                     <KTIcon iconName='profile-circle' className='fs-4 me-1' />
-                    {persona?.name},
+                    {persona?.name}
                   </a>
                   <a
                     href='#'
@@ -59,14 +59,14 @@ const ReportDetailHeader: React.FC = () => {
                     className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'
                   >
                     <KTIcon iconName='profile-circle' className='fs-4 me-1' />
-                    {reportDetail?.user_phone}
+                    {reportDetail?.channel === 'sms' ? reportDetail?.user_phone : reportDetail?.user_username}
                   </a>
                   <a
                     href='#'
                     className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'
                   >
                     <KTIcon iconName='profile-circle' className='fs-4 me-1' />
-                    {reportDetail?.channel}
+                    {reportDetail?.channel.toUpperCase()}
                   </a>
                   {/* <a
                     href='#'

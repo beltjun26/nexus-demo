@@ -97,7 +97,7 @@ export function Conversations() {
                           href='#'
                           className='fs-5 fw-bolder text-gray-900 text-hover-primary me-1'
                         >
-                          Name
+                          David
                         </a>
                         <span className='text-muted fs-7 mb-1'>{message.time}</span>
                       </div>
@@ -110,7 +110,7 @@ export function Conversations() {
                           href='#'
                           className='fs-5 fw-bolder text-gray-900 text-hover-primary ms-1'
                         >
-                          You
+                          {reportDetail?.persona}
                         </a>
                       </div>
                       <div className='symbol  symbol-35px symbol-circle '>
