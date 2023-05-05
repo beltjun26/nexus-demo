@@ -143,7 +143,9 @@ export function Blockchain() {
             <label className='col-lg-4 fw-bold text-muted'>txid</label>
 
             <div className='col-lg-8'>
-              <span className='fw-bolder fs-6 text-dark'>{reportDetail?.blochain_info.bitcoin?.recent_tx[0].txid}</span>
+              <span className='fw-bolder fs-6 text-dark'>
+                {reportDetail?.blochain_info.bitcoin?.recent_tx[0].txid}
+              </span>
             </div>
           </div>
 
@@ -151,7 +153,9 @@ export function Blockchain() {
             <label className='col-lg-4 fw-bold text-muted'>version</label>
 
             <div className='col-lg-8 fv-row'>
-              <span className='fw-bold fs-6'>{reportDetail?.blochain_info.bitcoin?.recent_tx[0].version}</span>
+              <span className='fw-bold fs-6'>
+                {reportDetail?.blochain_info.bitcoin?.recent_tx[0].version}
+              </span>
             </div>
           </div>
 
@@ -159,7 +163,9 @@ export function Blockchain() {
             <label className='col-lg-4 fw-bold text-muted'>locktime</label>
 
             <div className='col-lg-8 d-flex align-items-center'>
-              <span className='fw-bolder fs-6 me-2'>{reportDetail?.blochain_info.bitcoin?.recent_tx[0].locktime}</span>
+              <span className='fw-bolder fs-6 me-2'>
+                {reportDetail?.blochain_info.bitcoin?.recent_tx[0].locktime}
+              </span>
             </div>
           </div>
 
@@ -167,7 +173,29 @@ export function Blockchain() {
             <label className='col-lg-4 fw-bold text-muted'>size</label>
 
             <div className='col-lg-8 d-flex align-items-center'>
-              <span className='fw-bolder fs-6 me-2'>{reportDetail?.blochain_info.bitcoin?.recent_tx[0].size}</span>
+              <span className='fw-bolder fs-6 me-2'>
+                {reportDetail?.blochain_info.bitcoin?.recent_tx[0].size}
+              </span>
+            </div>
+          </div>
+
+          <div className='row mb-7'>
+            <label className='col-lg-4 fw-bold text-muted'>Weight</label>
+
+            <div className='col-lg-8 d-flex align-items-center'>
+              <span className='fw-bolder fs-6 me-2'>
+                {reportDetail?.blochain_info.bitcoin?.recent_tx[0].weight}
+              </span>
+            </div>
+          </div>
+
+          <div className='row mb-7'>
+            <label className='col-lg-4 fw-bold text-muted'>Fee</label>
+
+            <div className='col-lg-8 d-flex align-items-center'>
+              <span className='fw-bolder fs-6 me-2'>
+                {reportDetail?.blochain_info.bitcoin?.recent_tx[0].fee}
+              </span>
             </div>
           </div>
 
@@ -184,13 +212,14 @@ export function Blockchain() {
                     path='/media/icons/duotune/arrows/arr064.svg'
                   />
                 </span>
-                <h3 className='fs-4 text-gray-800 fw-bold mb-0 ms-4'>VOUT 1</h3>
+                <h3 className='fs-4 text-gray-800 fw-bold mb-0 ms-4'>VOUT</h3>
               </div>
               <div
                 id='kt_accordion_2_item_2'
                 className='collapse fs-6 ps-10'
                 data-bs-parent='#kt_accordion_2'
               >
+                {/* {reportDetail?.blochain_info.bitcoin} */}
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the industry's standard dummy text ever since the 1500s, when an
                 unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -210,7 +239,7 @@ export function Blockchain() {
                     path='/media/icons/duotune/arrows/arr064.svg'
                   />
                 </span>
-                <h3 className='fs-4 text-gray-800 fw-bold mb-0 ms-4'>VOUT 2</h3>
+                <h3 className='fs-4 text-gray-800 fw-bold mb-0 ms-4'>VIN</h3>
               </div>
               <div
                 id='kt_accordion_2_item_3'

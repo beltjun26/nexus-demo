@@ -7,6 +7,7 @@ import {
   MixedWidget14,
   MixedWidget15,
 } from '../../../_metronic/partials/widgets'
+import {HighRiskWidget} from '../../../_metronic/partials/widgets/mixed/HighRiskWidget'
 
 const DashboardPage = () => (
   <>
@@ -33,7 +34,11 @@ const DashboardPage = () => (
 
       {/*begin::Col*/}
       <div className='col-xl-4'>
-        <MixedWidget15 className='card-xl-stretch mb-xl-10' backGroundColor='#CBD4F4' />
+        <HighRiskWidget
+          chartHeight='100px'
+          className='card-xl-stretch mb-xl-10'
+          backGroundColor='#F7D9E3'
+        />
       </div>
       {/*end::Col*/}
     </div>
@@ -43,17 +48,17 @@ const DashboardPage = () => (
 
     {/*begin::Row*/}
     {/* <div className='row gy-5 g-xl-10'> */}
-      {/*begin::Col*/}
-      {/* <div className='col-xxl-6'>
+    {/*begin::Col*/}
+    {/* <div className='col-xxl-6'>
         <ListsWidget5 className='card-xl-stretch mb-xl-10' />
       </div> */}
-      {/*end::Col*/}
+    {/*end::Col*/}
 
-      {/*begin::Col*/}
-      {/* <div className='col-xxl-6'>
+    {/*begin::Col*/}
+    {/* <div className='col-xxl-6'>
         <ListsWidget4 className='card-xl-stretch mb-5 mb-xl-10' items={5} />
       </div> */}
-      {/*end::Col*/}
+    {/*end::Col*/}
     {/* </div> */}
   </>
 )

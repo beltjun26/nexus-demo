@@ -60,7 +60,7 @@ const ReportDetailPage = () => {
           path='conversations'
           element={
             <>
-              <PageTitle breadcrumbs={profileBreadCrumbs}>Persona Profile</PageTitle>
+              <PageTitle breadcrumbs={profileBreadCrumbs}>Conversation History</PageTitle>
               <Conversations />
             </>
           }
@@ -69,7 +69,7 @@ const ReportDetailPage = () => {
           path='blockchain'
           element={
             <>
-              <PageTitle breadcrumbs={profileBreadCrumbs}>Persona Profile</PageTitle>
+              <PageTitle breadcrumbs={profileBreadCrumbs}>Blockchain</PageTitle>
               <Blockchain />
             </>
           }

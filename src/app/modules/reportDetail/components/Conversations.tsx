@@ -8,13 +8,31 @@ import { defaultMessages } from '../../../../_metronic/helpers/dataExamples'
 import clsx from 'clsx'
 import { toAbsoluteUrl } from '../../../../_metronic/helpers'
 
+const mapStringToMessageModel = (str: string) => {
+  const [user, text] = str.split(/: (.+)/);
+  const now = new Date();
+
+  const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+  return {
+    user: user === "User" ? 0 : 1,
+    type: user === "User" ? 'in' : 'out', // Updated this line
+    text: text.trim(),
+    time: time,
+    template: false,
+  };
+};
+
 export function Conversations() {
   const nexusData = useContext(NexusDataContext)
-  const { id } = useParams()
+  const { reportId } = useParams()
 
-  const conversations = nexusData.personaConversations
+  const reportDetail = nexusData.reportDetails.find((report) => report.report_id === reportId)
 
-  const messages = defaultMessages
+
+  const messages = reportDetail?.conversation_history.map(mapStringToMessageModel)
+
+  console.log('messages', messages)
   
   return (
     <>
@@ -43,7 +61,7 @@ export function Conversations() {
 
       <div className='row g-6 g-xl-9'>
         <div className='col-sm-12 col-xl-12'>
-        {messages.map((message, index) => {
+        {messages?.map((message, index) => {
           const isDrawer = false
           // const userInfo = userInfos[message.user]
           const state = message.type === 'in' ? 'info' : 'primary'
@@ -119,59 +137,6 @@ export function Conversations() {
         </div>
       </div>
 
-      <div className='d-flex flex-stack flex-wrap pt-10'>
-        <div className='fs-6 fw-bold text-gray-700'>Showing 1 to 10 of 50 entries</div>
-
-        <ul className='pagination'>
-          <li className='page-item previous'>
-            <a href='#' className='page-link'>
-              <i className='previous'></i>
-            </a>
-          </li>
-
-          <li className='page-item active'>
-            <a href='#' className='page-link'>
-              1
-            </a>
-          </li>
-
-          <li className='page-item'>
-            <a href='#' className='page-link'>
-              2
-            </a>
-          </li>
-
-          <li className='page-item'>
-            <a href='#' className='page-link'>
-              3
-            </a>
-          </li>
-
-          <li className='page-item'>
-            <a href='#' className='page-link'>
-              4
-            </a>
-          </li>
-
-          <li className='page-item'>
-            <a href='#' className='page-link'>
-              5
-            </a>
-          </li>
-
-          <li className='page-item'>
-            <a href='#' className='page-link'>
-              6
-            </a>
-          </li>
-
-          <li className='page-item next'>
-            <a href='#' className='page-link'>
-              <i className='next'></i>
-            </a>
-          </li>
-        </ul>
-      </div>
     </>
   )
 }
