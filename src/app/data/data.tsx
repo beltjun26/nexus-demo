@@ -13,22 +13,38 @@ const reportDetails = reportDetail.reports_list_data
 const personaConversations = conversations.persona_conversations
 const reports = reportList.reports_list_data
 
+const accounts = [
+  {
+    username: 'user1',
+    email: 'user1@hypernexus.com',
+  },
+  {
+    username: 'user2',
+    email: 'user2@hypernexus.com',
+  },
+  {
+    username: 'user3',
+    email: 'user3@hypernexus.com',
+  },
+]
+
 const NexusDataContext = createContext({
-    personas: personas,
-    alert: alert,
-    reportDetails: reportDetails,
-    reports: reports,
-    personaConversations: personaConversations
+  personas: personas,
+  alert: alert,
+  reports: reports,
+  reportDetails: reportDetails,
+  personaConversations: personaConversations,
+  accounts: accounts,
 })
 
 const NexusDataProvider: FC<WithChildren> = ({children}) => {
-    
-    return(
-        <NexusDataContext.Provider value={{personas, alert, reportDetails, personaConversations,reports }}>
-            {children}
-        </NexusDataContext.Provider>
-    )
-
+  return (
+    <NexusDataContext.Provider
+      value={{personas, alert, reportDetails, personaConversations, accounts, reports}}
+    >
+      {children}
+    </NexusDataContext.Provider>
+  )
 }
 
 export { NexusDataProvider, NexusDataContext }
