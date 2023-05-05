@@ -98,7 +98,7 @@ const TablesWidget9: React.FC<Props> = ({className}) => {
                           <Link to={personaLink} className='text-dark fw-bold text-hover-primary fs-6'>
                             {persona.name}
                           </Link>
-                          <span className='text-muted fw-semibold text-muted d-block fs-7'>
+                          <span className='text-muted fw-semibold text-muted d-block fs-7 text-gray-800'>
                             {persona.type}
                           </span>
                         </div>

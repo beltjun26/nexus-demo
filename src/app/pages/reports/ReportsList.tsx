@@ -78,7 +78,7 @@ const ReportsList: React.FC<Props> = ({className}) => {
                           <Link to={`/reports/details/${report.report_id}/telco`} className='text-dark fw-bold text-hover-primary fs-6'>
                             {report.persona_name}
                           </Link>
-                          <span className='text-muted fw-semibold text-muted d-block fs-7'>
+                          <span className='text-muted fw-semibold text-muted d-block fs-7 text-gray-800'>
                             {report.persona_type}
                           </span>
                         </div>

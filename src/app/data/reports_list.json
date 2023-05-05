@@ -6,7 +6,7 @@
 	  	"channel": "sms",
 	  	"predator_score": "78",
 	  	"predator_label": "High Risk",
-	  	"last_updated": "May 5th, 2023 - 23:21 ET"
+	  	"last_updated": "May 5th, 2023 - 10:52 ET"
   	},{
   		"report_id": "212",
 	  	"persona_type": "Child Predation",
@@ -14,7 +14,7 @@
 	  	"channel": "discord",
 	  	"predator_score": "41",
 	  	"predator_label": "Potential Risk",
-	  	"last_updated": "May 5th, 2023 - 19:09 ET"
+	  	"last_updated": "May 5th, 2023 - 10:52 ET"
   	},{
   		"report_id": "213",
 	  	"persona_type": "Elderly Financial",
